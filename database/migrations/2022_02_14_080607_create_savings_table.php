@@ -17,10 +17,9 @@ class CreateSavingsTable extends Migration
             $table->bigIncrements('id');
             $table->integer('possession');
             $table->integer('user_id');
-            $table->timestamps('created_at');
-            $table->timestamps('updated_at');
-            $table->timestamps('deleted_at');
             $table->timestamps();
+            $table->softDeletes();
+
         });
     }
 
