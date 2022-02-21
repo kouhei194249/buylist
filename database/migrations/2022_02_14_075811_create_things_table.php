@@ -23,9 +23,9 @@ class CreateThingsTable extends Migration
             $table->string('clear');
             $table->integer('user_id');
             $table->integer('category_id');
-            $table->timestamps('created_at');
-            $table->timestamps('updated_at');
-            $table->timestamps('deleted_at');
+            $table->timestamps();
+           $table->softDeletes();
+
         });
     }
 

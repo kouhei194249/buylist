@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/','ThingController@index');
+Route::get('/things/category/{category}','ThingController@list');
+Route::get('/things/{thing}','ThingController@show');
+Route::get('/things/{things}/create','ThingController@create');
+Route::get('/category/{category}/possession','ThingController@possession');
+
+Route::post('category','ThingController@store');
+
