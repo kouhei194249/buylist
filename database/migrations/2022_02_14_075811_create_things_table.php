@@ -14,15 +14,15 @@ class CreateThingsTable extends Migration
     public function up()
     {
         Schema::create('things', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('name');
             $table->integer('price');
             $table->string('rank');
-            $table->text('image');
-            $table->string('other');
-            $table->string('clear');
-            $table->integer('user_id');
-            $table->integer('category_id');
+            // $table->text('image');
+            $table->string('other')->nullable();
+            // $table->string('clear');
+            $table->integer('user_id')->unsigned(); 
+            $table->integer('category_id')->unsigned(); 
             $table->timestamps();
            $table->softDeletes();
 
