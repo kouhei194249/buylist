@@ -9,32 +9,20 @@
     <body>
         <h1>買い物リスト</h1>
         <div class='categories'>
+            
             @foreach ($categories as $category)
                 <div class='category'>
-                    <h2 class='category_title'>{{ $category->category }}<a href='/things/category/{category}'></h2></a>
+                    <h2 class='category_title'>
+                        <a href="/things/category/{{ $category->id }}">{{ $category->category }} </a></h2>
                 </div>
             @endforeach
-            <h3 class='possession'><a href='/category/{category}/possession'>所持金</h3></a>　　　　　　　　
-            <h3 class='new product'><a href='/things/{things}/create'>新規商品</h3></a>　
-    
         </div>
+            <h3 class='possession'>                
+                <a href='/saving'>所持金</h3></a>　
+            <h3 class='new product'>
+                <a href='/things/create'>新規商品</h3></a>　
          <div class='paginate'>
             {{ $categories->links() }}
         </div>
     </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

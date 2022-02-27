@@ -14,9 +14,23 @@
 
 Route::get('/','ThingController@index');
 Route::get('/things/category/{category}','ThingController@list');
+Route::get('/things/create','ThingController@create');
 Route::get('/things/{thing}','ThingController@show');
-Route::get('/things/{things}/create','ThingController@create');
-Route::get('/category/{category}/possession','ThingController@possession');
 
-Route::post('category','ThingController@store');
+
+
+Route::get('/saving','ThingController@possession');
+
+Route::post('/things','ThingController@store1');
+Route::post('/saving','ThingController@store2');
+
+
+Route::get('/things/{thing}/edit','ThingController@edit');
+Route::put('/things/{thing}', 'ThingController@update');
+
+Route::delete('/things/{thing}', 'ThingController@delete');
+
+
+
+Route::post('category','ThingController@store3');
 
