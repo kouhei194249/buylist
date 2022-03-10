@@ -1,20 +1,22 @@
 <!DOCTYPE html>
+
+@extends('layouts.app')　
+
+@section('content')
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
         <title>Buy List</title>
     </head>
     <body>
-        <h1>Buy List</h1>
-    <form action="/saving"  method="POST">
-      　@csrf
-      　@method('PUT')
+        <h1>所持金</h1>
         <div class='possession'>
-            <h2>所持金</h2>
-            <input type="text" name="saving[possession]" placeholder="￥所持金" value="{{ old('thing.possession') }}"/>
+        <h3 class='possession_create'> 
+            <a href='/saving/p_create'>登録</h3></a>
+        <h3 class='possession_edit'> 
+            <a href='/saving/p_edit'>編集</h3></a>
         </div>
-            <input type="submit" value="保存"/>   
-    </form>
         <div class="back">[<a href="/">戻る</a>]</div>
     </body>
 </html>
+@endsection
