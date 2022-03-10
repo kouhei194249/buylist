@@ -1,11 +1,15 @@
 <!DOCTYPE HTML>
+
+@extends('layouts.app')　
+
+@section('content')
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
         <title>Buy List</title>
     </head>
     <body>
-        <h1 class="title">編集画面</h1>
+        <h1 class="title">商品編集</h1>
         <div class="content">
             <form action="/things/{{ $thing->id }}" method="POST">
                 @csrf
@@ -14,7 +18,11 @@
                 <h2>カテゴリー名</h2>
                 <select name="thing[category_id]">
                     @foreach($categories as $category)
-                       <option value="{{ $category->id }}">{{ $category->category }}</option>
+                     @if($category->id==$thing->category_id)
+                       <option value="{{ $category->id }}" selected>{{ $category->category }}</option>
+                     @else
+                         <option value="{{ $category->id }}">{{ $category->category }}</option>
+                      @endif
                     @endforeach
                 </select>
             </div>    
@@ -31,11 +39,13 @@
             <div class="thing_rank">
                 <h2>優先度</h2>
                 <select name="thing[rank]"> 
-                       <option value="1">1</option>
-                       <option value="2">2</option>
-                       <option value="3">3</option>
-                       <option value="4">4</option>
-                       <option value="5">5</option>
+                @foreach($numbers as $number)
+                    @if($number==$thing->rank)
+                    <option value="{{$number}}" selected>{{$number}}</option>
+                      @else
+                       <option value="{{$number}}" >{{$number}}</option>
+                      @endif
+                       @endforeach
                 </select>
                 <p class="thing_rank__error" style="color:red">{{ $errors->first('thing.rank') }}</p>
             </div>
@@ -49,3 +59,4 @@
         </div>
     </body>
 </html>
+@endsection

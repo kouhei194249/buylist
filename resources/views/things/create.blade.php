@@ -1,11 +1,15 @@
 <!DOCTYPE HTML>
+
+@extends('layouts.app')　
+
+@section('content')
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
         <title>Buy List</title>
     </head>
     <body>
-        <h1>Buy List</h1>
+        <h1>新規商品登録</h1>
         <form action="/things" method="POST">
             @csrf
             <div class="category_title">
@@ -48,3 +52,4 @@
         <div class="back">[<a href="/">戻る</a>]</div>
     </body>
 </html>
+@endsection

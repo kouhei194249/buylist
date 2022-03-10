@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+
+@extends('layouts.app')　
+
+@section('content')
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -17,9 +21,11 @@
             　          <h3>詳細</h3>
             　               <h3>価格：{{ $thing->price }}円</h3>
             　　　　        　  <h3>優先度：{{ $thing->rank }}</h3>
-　　　　　　　　            <h3>その他：{{ $thing->other}}</h3>      
-　　　　　　　　</div>　
-            </div>　
+　　　　　　　　            <h3>その他：{{ $thing->other}}</h3>
+　　　　　　　　    </div>　
+                </div>
+            </div>
+        </div>
             <p class='edit'>[<a href='/things/{{ $thing->id}}/edit'>編集</a>]</p>
         <form action="/things/{{ $thing->id }}" method="POST" style="display:inline">
             @csrf
@@ -29,3 +35,4 @@
         <div class="back">[<a href="/things/category/{{ $thing->category_id}}">戻る</a>]</div>
     </body>
 </html>
+@endsection

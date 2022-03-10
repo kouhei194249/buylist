@@ -24,7 +24,7 @@ class SavingRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'saving.possession' => 'required|integer|max:100',
         ];
     }
 }
