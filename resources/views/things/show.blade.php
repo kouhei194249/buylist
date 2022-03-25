@@ -22,6 +22,10 @@
             　               <h3>価格：{{ $thing->price }}円</h3>
             　　　　        　  <h3>優先度：{{ $thing->rank }}</h3>
 　　　　　　　　            <h3>その他：{{ $thing->other}}</h3>
+　　　　　　　　            @if ($thing->image_path)
+                                <!-- 画像を表示 -->
+                                <img src="https://buylist-backet.s3.ap-northeast-1.amazonaws.com/{{ $thing->image_path }}">
+                            @endif
 　　　　　　　　    </div>　
                 </div>
             </div>
@@ -32,6 +36,7 @@
             @method('DELETE')
         <button type="submit">削除</button> 
         </form>
+        
         <div class="back">[<a href="/things/category/{{ $thing->category_id}}">戻る</a>]</div>
     </body>
 </html>

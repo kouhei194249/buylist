@@ -4,6 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+
 class CreateThingsTable extends Migration
 {
     /**
@@ -23,6 +24,8 @@ class CreateThingsTable extends Migration
             // $table->string('clear');
             $table->integer('user_id')->unsigned(); 
             $table->integer('category_id')->unsigned(); 
+             // 画像のパスを保存するカラムを追加
+            $table->string('image_path')->nullable();
             $table->timestamps();
            $table->softDeletes();
 

@@ -10,7 +10,7 @@
     </head>
     <body>
         <h1>新規商品登録</h1>
-        <form action="/things" method="POST">
+        <form action="/things"enctype="multipart/form-data" method="POST">
             @csrf
             <div class="category_title">
                 <h2>カテゴリー名</h2>
@@ -46,6 +46,9 @@
             <div class="thing_other">
                 <h2>その他</h2>
                 <textarea type="text" name="thing[other]" placeholder="その他">{{ old('thing.other') }}</textarea>
+            </div>
+            <div class="thing[image_path]">
+                <input type="file" name="image">
             </div>
             <input type="submit" value="保存"/>
         </form>

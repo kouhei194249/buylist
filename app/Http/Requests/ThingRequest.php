@@ -13,7 +13,7 @@ class ThingRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,9 +24,9 @@ class ThingRequest extends FormRequest
     public function rules()
     {
         return [
-            'thing.name' => 'required|string|max:100',
-            'thing.price' => 'required|integer|max:100',
-            'thing.rank' => 'required|integer|max:10',
+            'thing.name' => 'required|string',
+            'thing.price' => 'required|integer',
+            'thing.rank' => 'required|integer',
         ];
     }
 }

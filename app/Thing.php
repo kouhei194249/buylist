@@ -12,6 +12,7 @@ class Thing extends Model
         'name',
         'price',
         'rank',
+        'image_path',
         'other',
     ];
    
