@@ -39,13 +39,13 @@
             <div class="thing_rank">
                 <h2>優先度</h2>
                 <select name="thing[rank]"> 
-                @foreach($numbers as $number)
+                    @foreach($numbers as $number)
                     @if($number==$thing->rank)
                     <option value="{{$number}}" selected>{{$number}}</option>
-                      @else
+                    @else
                        <option value="{{$number}}" >{{$number}}</option>
-                      @endif
-                       @endforeach
+                    @endif
+                    @endforeach
                 </select>
                 <p class="thing_rank__error" style="color:red">{{ $errors->first('thing.rank') }}</p>
             </div>

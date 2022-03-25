@@ -21,6 +21,10 @@
             　       <h3 class='price'>価格：{{ $thing->price}}円</h3>
             　       <h3 class='rank'>優先度：{{ $thing->rank}}</h3>
 　　　　　　　　    <h3 class='other'>その他：{{ $thing->other}}</h3>
+　　　　　　　　    @if ($thing->image_path)
+                        <!-- 画像を表示 -->
+                        <img src="https://buylist-backet.s3.ap-northeast-1.amazonaws.com/{{ $thing->image_path }}">
+                    @endif
 　　　　　　　　</div>
 　　　　　　@endforeach
 　　　　<div class="back">[<a href="/">戻る</a>]</div>

@@ -32,7 +32,7 @@ Route::group(['middleware' => ['auth']], function(){
     Route::get('/saving/p_create','ThingController@p_create');
     Route::post('/saving','ThingController@store2');
     Route::get('/saving/p_edit','ThingController@p_edit');
-    Route::put('/saving/{saving}', 'ThingController@update2 ');
+    Route::put('/saving/{saving}','ThingController@update2');
 });
     Auth::routes();
     

@@ -13,7 +13,7 @@ class SavingRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,7 @@ class SavingRequest extends FormRequest
     public function rules()
     {
         return [
-            'saving.possession' => 'required|integer|max:100',
+            'saving.possession' => 'required|integer',
         ];
     }
 }
