@@ -27,7 +27,7 @@
                     @endif
 　　　　　　　　</div>
 　　　　　　@endforeach
-　　　　<div class="back">[<a href="/">戻る</a>]</div>
+　　　　<div class="back"><a class="btn btn-light"href="/"role="button">戻る</a></div>
         <div class='paginate'>
             {{ $things->links() }}
         </div>   

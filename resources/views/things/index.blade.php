@@ -18,15 +18,15 @@
             @foreach ($categories as $category)
                 <div class='category'>
                     <h2 class='category_title'>
-                    <a href="/things/category/{{ $category->id }}">{{ $category->category }} </a></h2>
+                    <a class="btn btn-primary"href="/things/category/{{ $category->id }}"role="button">{{ $category->category }} </a></h2>
                 </div>
             @endforeach
         </div>
         <h2>[オプション]</h2>
             <h3 class='possession'>                
-                <a href='/saving'>所持金</h3></a>　
+                <a class="btn btn-primary"href='/saving'role="button">所持金</h3></a>　
             <h3 class='new product'>
-                <a href='/things/create'>新規商品登録</h3></a>　
+                <a class="btn btn-primary"href='/things/create'role="button">新規商品登録</h3></a>　
          <div class='paginate'>
             {{ $categories->links() }}
         </div>

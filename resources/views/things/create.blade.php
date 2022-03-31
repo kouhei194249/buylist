@@ -50,9 +50,9 @@
             <div class="thing[image_path]">
                 <input type="file" name="image">
             </div>
-            <input type="submit" value="保存"/>
+            <input class="btn btn-success"type="submit" value="保存"/>
         </form>
-        <div class="back">[<a href="/">戻る</a>]</div>
+        <div class="back"><a class="btn btn-light"href="/"role="button">戻る</a></div>
     </body>
 </html>
 @endsection
