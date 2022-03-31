@@ -17,9 +17,9 @@
             <input type="number" name="saving[possession]" placeholder="￥所持金" value="{{ old('thing.possession') }}"/>
             <p class="possession_create_error" style="color:red">{{ $errors->first('saving.possession') }}</p>
         </div>
-            <input type="submit" value="保存"/> 
+            <input class="btn btn-success"type="submit" value="保存"/> 
         </form>   
-            <div class="back">[<a href="/saving">戻る</a>]</div>
+            <div class="back"><a class="btn btn-light"href="/saving">戻る</a></div>
     </body>
 </html>
 @endsection

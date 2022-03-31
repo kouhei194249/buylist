@@ -53,9 +53,9 @@
                 <h2>その他</h2>
                 <textarea type="text" name="thing[other]" placeholder="その他">{{ $thing->other}}</textarea>
             </div>
-            <input type="submit" value="保存"/>
+            <input class="btn btn-success"type="submit" value="保存"/>
             </form>
-            <div class="back">[<a href="/things/{{ $thing->id }}">戻る</a>]</div>
+            <div class="back"><a class="btn btn-light"href="/things/{{ $thing->id }}"role="button">戻る</a></div>
         </div>
     </body>
 </html>

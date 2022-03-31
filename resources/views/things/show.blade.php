@@ -30,14 +30,14 @@
                 </div>
             </div>
         </div>
-            <p class='edit'>[<a href='/things/{{ $thing->id}}/edit'>編集</a>]</p>
+            <p class='edit'><a class="btn btn-secondary"href='/things/{{ $thing->id}}/edit'role="button">編集</a></p>
         <form action="/things/{{ $thing->id }}" method="POST" style="display:inline">
             @csrf
             @method('DELETE')
-        <button type="submit">削除</button> 
+        <button type="button" class="btn btn-danger">削除</button> 
         </form>
         
-        <div class="back">[<a href="/things/category/{{ $thing->category_id}}">戻る</a>]</div>
+        <div class="back"><a class="btn btn-light"href="/things/category/{{ $thing->category_id}}"role="button">戻る</a></div>
     </body>
 </html>
 @endsection

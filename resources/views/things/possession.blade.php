@@ -12,11 +12,11 @@
         <h1>所持金</h1>
         <div class='possession'>
         <h3 class='possession_create'> 
-            <a href='/saving/p_create'>登録</h3></a>
+            <a class="btn btn-primary"href='/saving/p_create'role="button">登録</h3></a>
         <h3 class='possession_edit'> 
-            <a href='/saving/p_edit'>編集</h3></a>
+            <a class="btn btn-secondary"href='/saving/p_edit'role="button">編集</h3></a>
         </div>
-        <div class="back">[<a href="/">戻る</a>]</div>
+        <div class="back"><a class="btn btn-light"href="/"role="button">戻る</a></div>
     </body>
 </html>
 @endsection
