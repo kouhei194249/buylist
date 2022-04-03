@@ -34,9 +34,8 @@
         <form action="/things/{{ $thing->id }}" method="POST" style="display:inline">
             @csrf
             @method('DELETE')
-        <button type="button" class="btn btn-danger">削除</button> 
+        <button type="submit" class="btn btn-danger">削除</button> 
         </form>
-        
         <div class="back"><a class="btn btn-light"href="/things/category/{{ $thing->category_id}}"role="button">戻る</a></div>
     </body>
 </html>

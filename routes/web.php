@@ -18,17 +18,11 @@ Route::group(['middleware' => ['auth']], function(){
     Route::get('/things/create','ThingController@create');
     Route::get('/things/{thing}','ThingController@show');
     Route::get('/saving','ThingController@possession');
-    
     Route::post('/things','ThingController@store1');
-    
-    
     Route::get('/things/{thing}/edit','ThingController@edit');
     Route::put('/things/{thing}', 'ThingController@update');
-    
     Route::delete('/things/{thing}', 'ThingController@delete');
-    
     Route::post('category','ThingController@store3');
-    
     Route::get('/saving/p_create','ThingController@p_create');
     Route::post('/saving','ThingController@store2');
     Route::get('/saving/p_edit','ThingController@p_edit');

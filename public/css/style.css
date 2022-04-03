@@ -6,8 +6,9 @@ body {
   margin: 0;
   width: 100vw;
   height: 100vh;
-  background-image:url("https://th.bing.com/th/id/R.f94d35da08445944cf0ca544a41ad87c?rik=Ufi5CaAjVAiQmw&riu=http%3a%2f%2fwan-chang.com%2fkindeditor%2fattached%2fimage%2f20210414%2f20210414181857_55762.png&ehk=VqiU5FWrpyYd%2fwgu5ZasfHdmVoHe%2frlo1sA71et8xpU%3d&risl=&pid=ImgRaw&r=0");
+  background-image:url("https://al.rr.leg.br/wp-content/uploads/2019/12/WhatsApp-Image-2019-12-26-at-11.32.58.jpeg");
   background-repeat: no-repeat;
+  background-attachment:fixed;
   background-position:50% 50%;
   background-size: cover;
 }
